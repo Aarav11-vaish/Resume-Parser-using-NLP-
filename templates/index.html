@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Parser</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<nav>
+    <div class="nav-container">
+        <h1>Parsit</h1>
+    </div>
+</nav>
+<div class="container">
+    <h1>Resume Parser</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="resume">Upload Resume (PDF):</label>
+        <input type="file" id="resume" name="resume" accept=".pdf" required>
+        <button type="submit">Upload</button>
+    </form>
+    <div id="loading" class="hidden">Uploading...</div>
+    <div id="results" class="hidden">
+        <h2>Parsed Resume Details</h2>
+        <p><strong>Phone Number:</strong> <span id="phone_number"></span></p>
+        <p><strong>Emails:</strong> <span id="emails"></span></p>
+        <p><strong>URLs:</strong> <span id="urls"></span></p>
+        <p><strong>Hyperlinks:</strong> <span id="hyperlinks"></span></p>
+        <p><strong>Skills:</strong> <span id="skills"></span></p>
+        <p><strong>Education:</strong> <span id="education"></span></p>
+        <p><strong>Summary:</strong> <span id="summary"></span></p>
+    </div>
+</div>
+<script src="/static/script.js"></script>
+</body>
+</html>
+ 
